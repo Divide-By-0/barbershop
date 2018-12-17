@@ -1,0 +1,556 @@
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Gin-Rough';
+    src: url('Gin-Rough.eot?#iefix') format('embedded-opentype'), url('Gin-Rough.otf') format('opentype'), url('Gin-Rough.woff') format('woff'), url('Gin-Rough.ttf') format('truetype'), url('Gin-Rough.svg#Gin-Rough') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body,
+html {
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'FuturaPT', serif;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    text-align: center;
+    background-color: #fff;
+    background: url('../images/pattern.jpg') repeat;
+    min-height: 100% !important;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.header,
+header {
+    position: relative;
+    min-height: 600px;
+    max-height: 1080px;
+    width: 100%;
+}
+
+.header:before {
+    content: "";
+    display: block;
+    padding-bottom: 64%;
+}
+
+.header {
+    background: url('../images/hero.jpg') no-repeat;
+    background-position: center 0;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.startbox {
+    background: url('../images/logo.png') no-repeat;
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    width: 532px;
+    height: 393px;
+    margin-top: -250px;
+    margin-left: -266px;
+}
+
+.border-1 {
+    background: url('../images/border_1.png') no-repeat;
+    background-position: center 0;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 142px;
+    z-index: 99998;
+}
+
+.turn-180 {
+    transform: rotate(180deg);
+    top: 0;
+}
+
+.content {
+    position: relative;
+    padding: 8.5% 0;
+    max-width: 100%;
+}
+
+p,
+a,
+span {
+    font-family: 'Amiri', serif;
+    font-size: 19px;
+    line-height: 1.7em;
+    color: #020303;
+}
+
+section p {
+    margin-top: 0px;
+}
+
+section img {
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Gin-Rough';
+    color: #020303;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    margin-top: 0px;
+}
+
+h5 {
+    font-weight: normal;
+}
+
+h1 {
+    color: #020303;
+    font-size: 60px;
+    line-height: 60px;
+    display: inline-block;
+}
+
+h1:before {
+    display: block;
+    margin: 0 auto;
+    content: ' ';
+    background-image: url('../images/deco.svg');
+    background-size: 129px 13px;
+    height: 13px;
+    width: 129px;
+    transform: rotate(180deg);
+    margin-bottom: 16px;
+}
+
+h1:after {
+    display: block;
+    margin: 0 auto;
+    content: ' ';
+    background-image: url('../images/deco.svg');
+    background-size: 129px 13px;
+    height: 13px;
+    width: 129px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #fff;
+    font-size: 45px;
+    line-height: 60px;
+    text-align: center;
+}
+
+h2:before {
+    display: block;
+    margin: 0 auto;
+    content: ' ';
+    background-image: url('../images/deco_white.svg');
+    background-size: 129px 13px;
+    height: 13px;
+    width: 129px;
+    transform: rotate(180deg);
+    margin-bottom: 10px;
+}
+
+h2:after {
+    display: block;
+    margin: 0 auto;
+    content: ' ';
+    background-image: url('../images/deco_white.svg');
+    background-size: 129px 13px;
+    height: 13px;
+    width: 129px;
+    margin-top: 22px;
+}
+
+h3 {
+    color: #020303;
+    font-size: 23px;
+    line-height: 30px;
+    display: inline-block;
+}
+
+a,
+img {
+    -webkit-transition: ease-in-out 0.3s;
+    -moz-transition: ease-in-out 0.3s;
+    transition: ease-in-out 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.brush {
+    width: 462px;
+    height: 864px;
+    background: url('../images/brush.jpg') no-repeat;
+    background-position: center 0;
+    background-size: cover;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    z-index: -1;
+}
+
+#map {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 640px;
+    margin-top: -8.4%;
+}
+
+.cta {
+    background: url('../images/cta.jpg') no-repeat;
+    width: 472px;
+    padding-top: 44px;
+    height: 127px;
+    display: inline-block;
+    margin-top: 50px;
+    cursor: pointer;
+    cursor: hand;
+    font-size: 21px;
+    letter-spacing: 0.075em;
+}
+
+a.cta {
+    color: #fff;
+}
+
+article {
+    padding: 120px 0px 0px 0px;
+}
+
+@media screen and (max-width: 680px) {
+    .startbox {
+        text-align: center;
+    }
+    .header img {
+        display: inline;
+        margin: 0 auto;
+        float: none;
+    }
+    .headline-start {
+        margin-top: -360px;
+    }
+    .argument {
+        padding-bottom: 30px;
+    }
+}
+
+.team {
+    height: auto;
+    background: url('../images/bg_team.jpg') no-repeat;
+    background-position: center 0;
+    background-color: #0d0e0e;
+    padding-bottom: 220px;
+}
+
+.barbers {
+    background: url('../images/barbers.png') no-repeat;
+    width: 381px;
+    height: 219px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 160px;
+    margin-bottom: 160px;
+}
+
+.teambox {
+    margin: 0 auto;
+    width: 96%;
+    position: relative;
+}
+
+.elmar {
+    background: url('../images/elmar.png') no-repeat;
+    float: left;
+    margin-left: 2%;
+}
+
+.felix {
+    background: url('../images/felix.png') no-repeat;
+    float: left;
+}
+
+.jonny {
+    background: url('../images/jonny.png') no-repeat;
+    float: right;
+}
+
+.mitarbeiter {
+    padding-bottom: 35%;
+    min-height: 400px;
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 31%;
+    background-size: contain;
+    text-align: center;
+    position: relative;
+}
+
+.name {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+h2.name {
+    font-size: 38px;
+}
+
+.vid {
+    background: url('../images/video_bg.jpg') no-repeat;
+    background-size: contain;
+    background-position: center 0;
+    margin-bottom: 120px;
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 60px;
+}
+
+.fb-video {
+    width: 60% !important;
+}
+
+.razor {
+    width: 513px;
+    height: 944px;
+    position: absolute;
+    right: 0;
+    background: url('../images/razor.png') no-repeat;
+    margin-top: -300px;
+    z-index: 99999;
+}
+
+.whisky {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 20px;
+    bottom: 0px;
+    background: url('../images/whiskey.jpg') no-repeat;
+    background-size: contain;
+    z-index: -1;
+}
+
+.quote {
+    color: #020303;
+    font-size: 46px;
+    font-style: italic;
+    line-height: 60px;
+    display: inline-block;
+    letter-spacing: 0.075em;
+    z-index: 200;
+}
+
+.quote:before {
+    display: block;
+    margin: 0 auto;
+    content: ' ';
+    background-image: url('../images/deco.svg');
+    background-size: 129px 13px;
+    height: 13px;
+    width: 129px;
+    transform: rotate(180deg);
+    margin-bottom: 19px;
+}
+
+.quote:after {
+    display: block;
+    margin: 0 auto;
+    content: ' ';
+    background-image: url('../images/deco.svg');
+    background-size: 129px 13px;
+    height: 13px;
+    width: 129px;
+    margin-top: 22px;
+    margin-bottom: 40px;
+}
+
+.signature {
+    width: 593px;
+    height: 110px;
+    margin: 0 auto;
+    position: relative;
+    background-image: url('../images/signature.jpg');
+    background-position: center 0;
+    background-repeat: no-repeat;
+    padding-top: 128px;
+}
+
+.gallery {
+    height: auto;
+    background: url('../images/bg_gallery.jpg') no-repeat;
+    background-position: center 0;
+    background-color: #0d0e0e;
+    padding-bottom: 320px;
+}
+
+.barberclub {
+    background: url('../images/barberclub.png') no-repeat;
+    width: 547px;
+    height: 219px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 160px;
+    margin-bottom: 160px;
+}
+
+.gallerywrapper {
+    max-width: 1100px;
+    width: 90%;
+    min-width: 680px;
+    height: 1200px;
+    margin: 0 auto;
+}
+
+.topleft {
+    width: 59%;
+    max-width: 652px;
+    float: left;
+    position: relative;
+    margin-right: 3%;
+}
+
+.topright {
+    width: 38%;
+    max-width: 429px;
+    float: left;
+    position: relative;
+}
+
+.bottom {
+    width: 100%;
+    max-width: 1100px;
+    float: left;
+    position: relative;
+}
+
+.topleft img,
+.topright img {
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.bottom img {
+    width: 48.5%
+}
+
+.contact {
+    color: #020303;
+    font-size: 46px;
+    font-style: italic;
+    line-height: 70px;
+    display: inline-block;
+    letter-spacing: 0.075em;
+    margin-bottom: 5px;
+}
+
+a.contact:hover {
+    color: #515151;
+}
+
+.hl-contact {
+    background: url('../images/kontakt.jpg') no-repeat;
+    width: 400px;
+    height: 226px;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+.social {
+    display: block;
+    margin-top: 60px;
+    width: 549px;
+    height: 51px;
+    background: url('../images/bg-social.jpg') no-repeat;
+    position: relative;
+    margin: 0 auto;
+}
+
+.social img {
+    padding: 0px 10px;
+}
+
+.impressum {
+    position: absolute;
+    bottom: -100px;
+    right: 40px;
+    color: #515151;
+    font-size: 16px;
+}
+
+.impressum a,
+.impressum span {
+    font-size: 16px;
+    color: #515151
+}
+
+.impressum a:hover {
+    color: #000
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    /* make things invisible upon start */
+    animation: fadeIn ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 0.3s;
+}
+
+.delay-1 {
+    animation-delay: 0.5s;
+}
+
+.gmnoprint,
+.gm-style-cc {
+    display: none;
+}
