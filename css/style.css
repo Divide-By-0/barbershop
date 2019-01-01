@@ -98,6 +98,12 @@ header {
     max-width: 100%;
 }
 
+.content2 {
+    position: relative;
+    padding: 8.5% 0;
+    max-width: 1200px;
+}
+
 p,
 a,
 span {
@@ -234,7 +240,7 @@ a {
 }
 
 .cta {
-    background: url('../images/cta.jpg') no-repeat;
+    background: url('../images/cta.png') no-repeat;
     width: 472px;
     padding-top: 44px;
     height: 127px;
@@ -295,23 +301,13 @@ article {
     position: relative;
 }
 
-.elmar {
-    background: url('../images/elmar.png') no-repeat;
+.aayush {
+    background: url('../images/aayush.png') no-repeat;
     display: block;
     margin-left: auto;
     margin-right: auto;
     /*float: left;*/
     /*margin-left: 2%;*/
-}
-
-.felix {
-    background: url('../images/felix.png') no-repeat;
-    float: left;
-}
-
-.jonny {
-    background: url('../images/jonny.png') no-repeat;
-    float: right;
 }
 
 .mitarbeiter {
@@ -349,6 +345,16 @@ h2.name {
     padding-left: 60px;
 }
 
+.beforeafter {
+    background: url('../images/beforeafter.png') no-repeat;
+    width: 650px;
+    height: 226px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: -25px;
+    margin-bottom: 60px;
+}
+
 .fb-video {
     width: 60% !important;
 }
@@ -359,8 +365,8 @@ h2.name {
     position: absolute;
     right: 0;
     background: url('../images/razor.png') no-repeat;
-    margin-top: -300px;
-    z-index: 99999;
+    margin-top: -1350px;
+    z-index: 5000;
 }
 
 .whisky {
@@ -368,7 +374,8 @@ h2.name {
     height: 400px;
     position: absolute;
     left: 20px;
-    bottom: 0px;
+    margin-top: -500px;
+    /*bottom: 0px;*/
     background: url('../images/whiskey.jpg') no-repeat;
     background-size: contain;
     z-index: -1;
@@ -421,7 +428,7 @@ h2.name {
 
 .gallery {
     height: auto;
-    background: url('../images/bg_gallery.jpg') no-repeat;
+    background: url('../images/statadark.jpg') no-repeat;
     background-position: center 0;
     background-color: #0d0e0e;
     padding-bottom: 320px;
@@ -445,6 +452,14 @@ h2.name {
     margin: 0 auto;
 }
 
+.gallerywrapper2 {
+    max-width: 1100px;
+    width: 90%;
+    min-width: 680px;
+    height: 1600px;
+    margin: 0 auto;
+}
+
 .topleft {
     width: 59%;
     max-width: 652px;
@@ -460,11 +475,18 @@ h2.name {
     position: relative;
 }
 
+
 .bottom {
     width: 100%;
     max-width: 1100px;
     float: left;
     position: relative;
+}
+
+.centeredimg img{
+    display:inline-block;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .topleft img,
@@ -476,6 +498,83 @@ h2.name {
 .bottom img {
     width: 48.5%
 }
+
+.wrapperimages {
+    width:600px;
+    margin:0 auto; 
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.column img {
+    margin-top: 8px;
+    /*vertical-align: middle;*/
+    width: 98%;
+    max-width: 300px;
+    /*position: relative;*/
+}
+
+.flipped2 {
+  transform: rotateY(180deg);
+  /*margin-right:1%;*/
+}
+
+/*
+
+.topleft2 {
+    width: 48.5%;
+    max-width: 534px;
+    float: left;
+    position: relative;
+}
+.topright2 {
+    width: 48.5%;
+    max-width: 534px;
+    float: right;
+    position: relative;
+}
+.bottom2 {
+    width: 100%;
+    max-width: 1100px;
+    float: left;
+    position: relative;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.rotated270 {
+  transform: rotateZ(270deg);
+}
+.rotated90 {
+  transform: rotateZ(90deg);
+}
+
+.topleft2 img,
+.topright2 img {
+    transform: rotate(90deg);
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.bottom2 img {
+    transform: rotate(90deg);
+    width: 48.5%
+}*/
 
 .contact {
     color: #020303;
