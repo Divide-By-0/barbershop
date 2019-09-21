@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Big Daddy Gup's Fade Shop</title>
+    <meta charset="utf-8">
+
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-131542240-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+
+    <link rel="shortcut icon" href="images/fav.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="initial-scale=0.2">
+    <meta property="og:image" content="images/aayush.png">
+
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- Add venobox -->
+
+    <link rel="stylesheet" href="venobox/venobox.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="venobox/venobox.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            /* default settings */
+            $('.venobox').venobox();
+
+
+            /* custom settings */
+            $('.venobox_custom').venobox({
+                framewidth: '', // default: ''
+                frameheight: '', // default: ''
+                border: '10px', // default: '0'
+                bgcolor: '#5dff5e', // default: '#fff'
+                titleattr: 'data-title', // default: 'title'
+                numeratio: true, // default: false
+                infinigall: true // default: false
+            });
+
+            /* auto-open #firstlink on page load */
+            $("#firstlink").venobox().trigger('click');
+        });
+    </script>
+
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Amiri:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script> -->
+    <link type="text/css" media="screen" rel="stylesheet" href="awwwards.css" />
+
+
+</head>
+
+<body>
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js"></script>
+    <script>
+        google.maps.event.addDomListener(window, 'load', init);
+
+        var map;
+
+        function init() {
+            var mapOptions = {
+                center: new google.maps.LatLng(50.9295324, 6.9374233),
+                zoom: 16,
+                zoomControl: false,
+                disableDoubleClickZoom: true,
+                mapTypeControl: false,
+                scaleControl: false,
+                scrollwheel: false,
+                streetViewControl: false,
+                draggable: true,
+                overviewMapControl: false,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                styles: [{
+                    "stylers": [{
+                        "hue": "#28c6ae"
+                    }, {
+                        "invert_lightness": true
+                    }, {
+                        "saturation": -100
+                    }, {
+                        "lightness": 28
+                    }, {
+                        "gamma": 0.45
+                    }]
+                }, {
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#000"
+                    }]
+                }],
+
+            }
+
+            var mapElement = document.getElementById('map');
+            var map = new google.maps.Map(mapElement, mapOptions);
+            var locations = [
+
+            ];
+            var image = 'images/pin.png';
+            var derpixelist = new google.maps.LatLng(50.9285045, 6.9374233);
+            var marker = new google.maps.Marker({
+                position: derpixelist,
+                map: map,
+                icon: image,
+            });
+
+            for (i = 0; i < locations.length; i++) {
+                marker = new google.maps.Marker({
+                    icon: '',
+                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                    map: map
+                });
+            }
+        }
+    </script>
+
+
+    <header id="head">
+        <div class="border-1"></div>
+        <section class="header" data-stellar-background-ratio="0.8">
+
+            <section class="startbox fade-in">
+
+            </section>
+
+        </section>
+    </header>
+
+
+
+    <div class="content">
+        <div style="position:relative;" data-stellar-ratio="1.11" data-stellar-vertical-offset="1000">
+            <section class="fg10 push1">
+                <img src="images/badge.jpg" style="display:block;">
+                <h1>Big Daddy Gup's Fade Shop</h1>
+            </section>
+
+            <section class="fg6 push3">
+                <p>
+                    A space for MIT students to obtain the tightest fades the world of barbery has to offer. <br><br> Precise, elegant, shaved.
+                </p>
+
+                <a class="cta" data-scroll data-speed="3" data-easing="easeInOutCubic" data-url="false" href="#kontakt">Make Appointment Now</a>
+            </section>
+        </div>
+
+        <div style="clear:both;"></div>
+        <div class="brush fg-no-mobile"></div>
+        <div style="clear:both;"></div>
+    </div>
+
+
+
+
+
+    <div class="content team" data-stellar-background-ratio="0.8">
+
+        <div class="border-1 turn-180"></div>
+        <div class="border-1"></div>
+
+        <div class="barbers"></div>
+
+        <div class="teambox">
+            <a class="venobox" data-gall="myGallery" style="visibility:hidden; position:absolute" href="images/aayush.png"><img src="images/aayush.png"></a>
+
+            <div class="mitarbeiter aayush">
+                <h2 class="name">Aayush Gupta</h2>
+            </div>
+
+        </div>
+
+        <div style="clear:both;"></div>
+
+    </div>
+
+
+
+    <div class="content">
+        <div style="position:relative;" data-stellar-ratio="1.11" data-stellar-vertical-offset="1000">
+            <div class="beforeafter"> </div>
+
+            <div class="wrapperimages">
+                <div class="row">
+                    <div class="column " >
+                        <a class="venobox" data-gall="myGallery" href="images/before2_3200.jpg"><img src="images/before2_3200.jpg"></a>
+                        <a class="venobox" data-gall="myGallery" href="images/before4.jpg"><img src="images/before4.jpg"></a>
+                        <a class="venobox" data-gall="myGallery" href="images/before3_3200.jpg"><img src="images/before3_3200.jpg" ></a>
+                        <a class="venobox" data-gall="myGallery" href="images/longhairman2_3200.jpg"><img src="images/longhairman2_3200.jpg"></a>
+                    </div>
+
+                    <div class="column ">
+                        <a class="venobox" data-gall="myGallery" href="images/after2_3200.jpg"><img src="images/after2_3200.jpg"></a>
+                        <a class="venobox" data-gall="myGallery" href="images/after4.jpg"><img src="images/after4.jpg"></a>
+                        <a class="venobox" data-gall="myGallery" href="images/after3_3200.jpg"><img src="images/after3_3200.jpg"></a>
+                        <a class="venobox" data-gall="myGallery" href="images/after1_3200.jpg"><img src="images/after1_3200.jpg"></a>
+                    </div>
+                </div>
+            </div>
+            <!-- <section class="fg6 push3">
+                <span class="quote">“Big Daddy Gups has all the fades you need.”</span>
+                <div class="signature">
+                    <span>Not Aayush Gupta (Owner)</span>
+                </div>
+            </section> -->
+
+
+
+        </div>
+
+        <div class="razor"></div>
+        <div class="whisky fg-no-mobile"></div>
+        <div style="clear:both;"></div>
+    </div>
+
+
+
+    <div class="content gallery" data-stellar-background-ratio="0.8">
+
+        <div class="border-1 turn-180"></div>
+        <div class="border-1"></div>
+
+        <div class="barberclub"></div>
+
+        <div class="gallerywrapper">
+            <div class="topleft">
+                <a class="venobox" data-gall="myGallery" href="images/1.jpg"><img src="images/1.jpg"></a>
+                <a class="venobox" data-gall="myGallery" href="images/2.jpg"><img src="images/2.jpg"></a>
+            </div>
+
+            <div class="topright">
+                <a class="venobox" data-gall="myGallery" href="images/5.jpg"><img src="images/5.jpg"></a>
+                <a class="venobox" data-gall="myGallery" href="images/6.jpg"><img src="images/6.jpg"></a>
+            </div>
+
+            <div style="clear:both;"></div>                         <!-- remove big from href so clicked images are small -->
+            <div class="bottom">
+                <a class="venobox" data-gall="myGallery" href="images/3.jpg"><img src="images/3.jpg" style="margin-right:2%;"></a>
+                <a class="venobox" data-gall="myGallery" href="images/4.jpg"><img src="images/4.jpg"></a>
+            </div>
+        </div>
+
+
+        <div style="clear:both;"></div>
+
+    </div>
+
+
+
+
+    <div class="content" id="kontakt">
+        <div style="position:relative;" data-stellar-ratio="1.11" data-stellar-vertical-offset="1000">
+            <div class="hl-contact"></div>
+
+            <section class="fg6 push3">
+
+
+                <br>
+                <span class="contact">For appointments, hit my <a class="contact" href="https://www.facebook.com/aayushgupta05" style="text-decoration: underline;color:blue">dms</a>.<br></span><br>
+                <span style="font-variant-ligatures: none; display:block; letter-spacing: 0.075em; font-style:italic;"><b>Cost:</b> Pay what you want. Hit me up on my venmo aayush_gupta.</span>
+                <span style="font-variant-ligatures: none; display:block; letter-spacing: 0.075em; font-style:italic;"><b>Location:</b> Burton-Connor on B4 in the 432D. </span>
+                <span style="padding-bottom:65px; font-variant-ligatures: none; display:block; letter-spacing: 0.075em; font-style:italic;"><b>Hours:</b> Every day, 1am-2am </span>
+
+
+                <p style="font-style:normal; line-height:1.3; letter-spacing:0.5px; max-width:640px; margin:0 auto; padding-bottom:20px;">
+                    <strong>Cancellations</strong><br><br> Whoever cancels, ya moms a ho. <br> Thanks! <br><br>
+
+
+                <br><br>
+                <div style="clear:both;"></div>
+                <div class="social">
+                    <a href="https://www.facebook.com/aayushgupta05" target="blank"><img src="images/fb.jpg"></a>
+                    <a href="https://instagram.com/_aayushgupta_/" target="blank"><img src="images/instagram.jpg"></a>
+                </div>
+                <div style="clear:both;"></div>
+            </section>
+            <div style="clear:both;"></div>
+            <div class="impressum"><span>© Gentlemen Barber Clubs - <a href="impressum.html">Imprint</a></span></div>
+        </div>
+
+        <div style="clear:both;"></div>
+    </div>
+
+
+
+    <div class="content" style="padding-bottom:0px;">
+
+        <div class="border-1 turn-180"></div>
+
+        <div id="map"></div>
+
+
+        <div style="clear:both;"></div>
+
+    </div>
+
+
+
+
+
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/backtotop.js"></script>
+    <script>
+        smoothScroll.init();
+    </script>
+    <script src="js/jquery.stellar.js"></script>
+
+
+    <script type="text/javascript"></script>
+    <script type="text/javascript">
+        var isMobile = {
+            Android: function() {
+                return navigator.userAgent.match(/Android/i);
+            },
+            BlackBerry: function() {
+                return navigator.userAgent.match(/BlackBerry/i);
+            },
+            iOS: function() {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            },
+            Opera: function() {
+                return navigator.userAgent.match(/Opera Mini/i);
+            },
+            Windows: function() {
+                return navigator.userAgent.match(/IEMobile/i);
+            },
+            any: function() {
+                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+            }
+        };
+
+        if (isMobile.any()) {
+
+        } else {
+
+            $.stellar();
+        }
+    </script>
+    <script type="text/javascript">
+        if (!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
+            $(window).stellar(): false;
+        });
+        }
+    </script>
+
+
+    <!-- skrollr.init({forceHeight: false});-->
+
+
+
+
+
+
+</body>
+
+</html>
