@@ -65,76 +65,13 @@
     <link href='http://fonts.googleapis.com/css?family=Amiri:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script> -->
     <link type="text/css" media="screen" rel="stylesheet" href="awwwards.css" />
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
+    
 
 </head>
 
 <body>
 
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js"></script>
-    <script>
-        google.maps.event.addDomListener(window, 'load', init);
-
-        var map;
-
-        function init() {
-            var mapOptions = {
-                center: new google.maps.LatLng(50.9295324, 6.9374233),
-                zoom: 16,
-                zoomControl: false,
-                disableDoubleClickZoom: true,
-                mapTypeControl: false,
-                scaleControl: false,
-                scrollwheel: false,
-                streetViewControl: false,
-                draggable: true,
-                overviewMapControl: false,
-                mapTypeId: google.maps.MapTypeId.ROADMAP,
-                styles: [{
-                    "stylers": [{
-                        "hue": "#28c6ae"
-                    }, {
-                        "invert_lightness": true
-                    }, {
-                        "saturation": -100
-                    }, {
-                        "lightness": 28
-                    }, {
-                        "gamma": 0.45
-                    }]
-                }, {
-                    "featureType": "water",
-                    "elementType": "geometry",
-                    "stylers": [{
-                        "color": "#000"
-                    }]
-                }],
-
-            }
-
-            var mapElement = document.getElementById('map');
-            var map = new google.maps.Map(mapElement, mapOptions);
-            var locations = [
-
-            ];
-            var image = 'images/pin.png';
-            var derpixelist = new google.maps.LatLng(50.9285045, 6.9374233);
-            var marker = new google.maps.Marker({
-                position: derpixelist,
-                map: map,
-                icon: image,
-            });
-
-            for (i = 0; i < locations.length; i++) {
-                marker = new google.maps.Marker({
-                    icon: '',
-                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-                    map: map
-                });
-            }
-        }
-    </script>
 
 
     <header id="head">
@@ -310,6 +247,89 @@
 
         <div id="map"></div>
 
+        <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+      
+        <script src="https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js"></script>
+        
+        <div id="map" style="width: 100%; height: 300px; position: absolute; bottom: 0; "></div>
+        <!-- <script> -->
+        <script>
+            google.maps.event.addDomListener(window, 'load', init);
+    
+            var map;
+    
+            function init() {
+                // position we will use later
+                var lat = 42.355931;
+                var lon = -71.098347;
+                // initialize map
+                map = L.map('map').setView([lat, lon], 13);
+                // set map tiles source
+                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+                maxZoom: 18,
+                }).addTo(map);
+                // add marker to the map
+                marker = L.marker([lat, lon]).addTo(map);
+                // add popup to the marker
+                marker.bindPopup("<b>MIT Fades.</b><br />BC 431B<br />Cambridge").openPopup();
+                // var mapOptions = {
+                //     center: new google.maps.LatLng(42.355931, -71.098347),
+                //     zoom: 16,
+                //     zoomControl: false,
+                //     disableDoubleClickZoom: true,
+                //     mapTypeControl: false,
+                //     scaleControl: false,
+                //     scrollwheel: false,
+                //     streetViewControl: false,
+                //     draggable: true,
+                //     overviewMapControl: false,
+                //     mapTypeId: google.maps.MapTypeId.ROADMAP,
+                //     styles: [{
+                //         "stylers": [{
+                //             "hue": "#28c6ae"
+                //         }, {
+                //             "invert_lightness": true
+                //         }, {
+                //             "saturation": -100
+                //         }, {
+                //             "lightness": 28
+                //         }, {
+                //             "gamma": 0.45
+                //         }]
+                //     }, {
+                //         "featureType": "water",
+                //         "elementType": "geometry",
+                //         "stylers": [{
+                //             "color": "#000"
+                //         }]
+                //     }],
+    
+                // }
+    
+                // var mapElement = document.getElementById('map');
+                // var map = new google.maps.Map(mapElement, mapOptions);
+                // var locations = [
+    
+                // ];
+                // var image = 'images/pin.png';
+                // var derpixelist = new google.maps.LatLng(50.9285045, 6.9374233);
+                // var marker = new google.maps.Marker({
+                //     position: derpixelist,
+                //     map: map,
+                //     icon: image,
+                // });
+    
+                // for (i = 0; i < locations.length; i++) {
+                //     marker = new google.maps.Marker({
+                //         icon: '',
+                //         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                //         map: map
+                //     });
+                // }
+            }
+            </script>
+        </script>
 
         <div style="clear:both;"></div>
 
